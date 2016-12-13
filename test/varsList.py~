@@ -1,0 +1,35 @@
+#!/usr/bin/env python
+
+# varList = ['svMass', 'dRTauTau', 'dRJJ', 'svPt', 'dRhh', 'met', 'mJJReg', 'metTau1DPhi', 'metTau2DPhi', 
+#                 'metJ1DPhi', 'metJ2DPhi', 'metTauPairDPhi', 'metSvTauPairDPhi', 'metJetPairDPhi','CSVJ1', 'CSVJ2', 'fMassKinFit', 'chi2KinFit']
+
+# varList = ['svMass', 'dRJJ', 'metSvTauPairDPhi', 'mJJReg', 'met', 'metJetPairDPhi', 'fMassKinFit', 'svPt']
+
+# varList = ['svMass', 'dRTauTau', 'dRJJ', 'met', 'mJJReg', 'metJ2DPhi', 'fMassKinFit', 'chi2KinFit']
+# varList = ['svMass1', 'dRTauTau', 'dRJJ', 'met1', 'mJJ', 'metJ2DPhi', 'fMassKinFit', 'chi2KinFit2']
+varList = ['met', 'zeta', 'cosDPhi', 'm_eff']
+
+# varList = ['svMass', 'dRTauTau', 'dRJJ', 'met', 'mJJ', 'fMassKinFit', 'chi2KinFit2']
+
+# varList = ['svMass','met', 'mJJReg','chi2KinFit2']
+
+# varList = ['svMass', 'mJJ']
+
+
+# varList = ['svMass', 'dRTauTau', 'dRJJ', 'svPt', 'mJJReg', 'ptJJ']
+
+# varList = ['svMass', 'dRTauTau', 'dRJJ', 'mJJReg', 'ptJJ']
+# 
+# varList = ['svMass', 'dRTauTau', 'dRJJ', 'mJJReg', 'svPt']
+# 
+# varList = ['svMass', 'dRTauTau', 'dRJJ', 'mJJReg', 'fMass']
+# 
+# varList = ['svMass', 'mJJ', 'chi2KinFit']
+
+
+lumi = 2246.258005
+preFix = '/user_data/zmao/TMVA/'
+fs = 'em'
+
+bkg = [('DY', 'DY-50to200_all_SYNC_%s_noIso_OSTight.root' %fs),
+      ]

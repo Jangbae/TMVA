@@ -1,0 +1,605 @@
+[?1034h=== TMVAClassification: use method(s)...
+=== - <Cuts>
+=== - <CutsD>
+=== - <CutsPCA>
+=== - <CutsGA>
+=== - <CutsSA>
+=== - <Likelihood>
+=== - <LikelihoodD>
+=== - <LikelihoodPCA>
+=== - <LikelihoodKDE>
+=== - <LikelihoodMIX>
+=== - <PDERS>
+=== - <PDERSD>
+=== - <PDERSPCA>
+=== - <PDEFoam>
+=== - <PDEFoamBoost>
+=== - <KNN>
+=== - <LD>
+=== - <Fisher>
+=== - <FisherG>
+=== - <BoostedFisher>
+=== - <HMatrix>
+=== - <FDA_GA>
+=== - <FDA_SA>
+=== - <FDA_MC>
+=== - <FDA_MT>
+=== - <FDA_GAMT>
+=== - <FDA_MCMT>
+=== - <MLP>
+=== - <MLPBFGS>
+=== - <MLPBNN>
+=== - <CFMlpANN>
+=== - <TMlpANN>
+=== - <SVM>
+=== - <BDT>
+=== - <BDTD>
+=== - <BDTG>
+=== - <BDTB>
+=== - <RuleFit>
+
+[1mTMVA -- Toolkit for Multivariate Data Analysis[0m
+        Version 4.2.0, Sep 19, 2013
+        Copyright (C) 2005-2010 CERN, MPI-K Heidelberg, Us of Bonn and Victoria
+        Home page:     http://tmva.sf.net
+        Citation info: http://tmva.sf.net/citeTMVA.html
+        License:       http://tmva.sf.net/LICENSE
+
+TMVAlogon: use "TMVA" style [TMVA style based on "Plain" with modifications defined in tmvaglob.C]
+
+--- Factory                  : You are running ROOT Version: 5.34/18, Mar 14, 2014
+--- Factory                  : 
+--- Factory                  : _/_/_/_/_/ _|      _|  _|      _|    _|_|   
+--- Factory                  :    _/      _|_|  _|_|  _|      _|  _|    _| 
+--- Factory                  :   _/       _|  _|  _|  _|      _|  _|_|_|_| 
+--- Factory                  :  _/        _|      _|    _|  _|    _|    _| 
+--- Factory                  : _/         _|      _|      _|      _|    _| 
+--- Factory                  : 
+--- Factory                  : ___________TMVA Version 4.2.0, Sep 19, 2013
+--- Factory                  : 
+here
+--- DataSetInfo              : Added class "Signal"	 with internal class number 0
+--- Factory                  : Add Tree ljmet of type Signal with 56656 events
+/user_data/ssagir/LJMet_1lep_080816_HTB_step2_train/nominal/QCD_HT1000to1500_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_hadd.root
+--- DataSetInfo              : Added class "Background"	 with internal class number 1
+--- Factory                  : Add Tree ljmet of type Background with 205 events
+/user_data/ssagir/LJMet_1lep_080816_HTB_step2_train/nominal/QCD_HT1500to2000_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_hadd.root
+--- Factory                  : Add Tree ljmet of type Background with 199 events
+/user_data/ssagir/LJMet_1lep_080816_HTB_step2_train/nominal/QCD_HT2000toInf_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_hadd.root
+--- Factory                  : Add Tree ljmet of type Background with 129 events
+/user_data/ssagir/LJMet_1lep_080816_HTB_step2_train/nominal/QCD_HT300to500_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_hadd.root
+--- Factory                  : Add Tree ljmet of type Background with 69 events
+/user_data/ssagir/LJMet_1lep_080816_HTB_step2_train/nominal/QCD_HT500to700_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_hadd.root
+--- Factory                  : Add Tree ljmet of type Background with 324 events
+/user_data/ssagir/LJMet_1lep_080816_HTB_step2_train/nominal/QCD_HT700to1000_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_hadd.root
+--- Factory                  : Add Tree ljmet of type Background with 377 events
+/user_data/ssagir/LJMet_1lep_080816_HTB_step2_train/nominal/ST_s-channel_4f_leptonDecays_13TeV-amcatnlo-pythia8_TuneCUETP8M1_hadd.root
+--- Factory                  : Add Tree ljmet of type Background with 2789 events
+/user_data/ssagir/LJMet_1lep_080816_HTB_step2_train/nominal/ST_t-channel_antitop_4f_leptonDecays_13TeV-powheg-pythia8_TuneCUETP8M1_hadd.root
+--- Factory                  : Add Tree ljmet of type Background with 3346 events
+/user_data/ssagir/LJMet_1lep_080816_HTB_step2_train/nominal/ST_t-channel_top_4f_leptonDecays_13TeV-powheg-pythia8_TuneCUETP8M1_hadd.root
+--- Factory                  : Add Tree ljmet of type Background with 6328 events
+/user_data/ssagir/LJMet_1lep_080816_HTB_step2_train/nominal/ST_tW_antitop_5f_inclusiveDecays_13TeV-powheg-pythia8_TuneCUETP8M1_hadd.root
+--- Factory                  : Add Tree ljmet of type Background with 4180 events
+/user_data/ssagir/LJMet_1lep_080816_HTB_step2_train/nominal/ST_tW_top_5f_inclusiveDecays_13TeV-powheg-pythia8_TuneCUETP8M1_hadd.root
+--- Factory                  : Add Tree ljmet of type Background with 4215 events
+/user_data/ssagir/LJMet_1lep_080816_HTB_step2_train/nominal/TT_Mtt-1000toInf_TuneCUETP8M1_13TeV-powheg-pythia8_hadd.root
+--- Factory                  : Add Tree ljmet of type Background with 374563 events
+/user_data/ssagir/LJMet_1lep_080816_HTB_step2_train/nominal/TT_TuneCUETP8M1_13TeV-powheg-pythia8_Mtt0to1000_hadd.root
+--- Factory                  : Add Tree ljmet of type Background with 1997275 events
+/user_data/ssagir/LJMet_1lep_080816_HTB_step2_train/nominal/TT_TuneCUETP8M1_13TeV-powheg-pythia8_Mtt1000toInf_hadd.root
+--- Factory                  : Add Tree ljmet of type Background with 74544 events
+/user_data/ssagir/LJMet_1lep_080816_HTB_step2_train/nominal/TTWJetsToLNu_TuneCUETP8M1_13TeV-amcatnloFXFX-madspin-pythia8_hadd.root
+--- Factory                  : Add Tree ljmet of type Background with 8540 events
+/user_data/ssagir/LJMet_1lep_080816_HTB_step2_train/nominal/TTWJetsToQQ_TuneCUETP8M1_13TeV-amcatnloFXFX-madspin-pythia8_hadd.root
+--- Factory                  : Add Tree ljmet of type Background with 18816 events
+/user_data/ssagir/LJMet_1lep_080816_HTB_step2_train/nominal/TTZToLLNuNu_M-10_TuneCUETP8M1_13TeV-amcatnlo-pythia8_hadd.root
+--- Factory                  : Add Tree ljmet of type Background with 7219 events
+/user_data/ssagir/LJMet_1lep_080816_HTB_step2_train/nominal/TTZToQQ_TuneCUETP8M1_13TeV-amcatnlo-pythia8_hadd.root
+--- Factory                  : Add Tree ljmet of type Background with 21777 events
+/user_data/ssagir/LJMet_1lep_080816_HTB_step2_train/nominal/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_hadd.root
+--- Factory                  : Add Tree ljmet of type Background with 109 events
+/user_data/ssagir/LJMet_1lep_080816_HTB_step2_train/nominal/WW_TuneCUETP8M1_13TeV-pythia8_hadd.root
+--- Factory                  : Add Tree ljmet of type Background with 43 events
+/user_data/ssagir/LJMet_1lep_080816_HTB_step2_train/nominal/WZ_TuneCUETP8M1_13TeV-pythia8_hadd.root
+--- Factory                  : Add Tree ljmet of type Background with 74 events
+/user_data/ssagir/LJMet_1lep_080816_HTB_step2_train/nominal/ZZ_TuneCUETP8M1_13TeV-pythia8_hadd.root
+--- Factory                  : Add Tree ljmet of type Background with 36 events
+--- Factory                  : Preparing trees for training and testing...
+--- Factory                  : Booking method: [1mBDT[0m
+--- DataSetFactory           : Splitmode is: "RANDOM" the mixmode is: "SAMEASSPLITMODE"
+--- DataSetFactory           : Create training and testing trees -- looping over class "Signal" ...
+--- DataSetFactory           : Weight expression for class 'Signal': "TrigEffWeight*pileupWeight*isoSF*lepIdSF*EGammaGsfSF*MuTrkSF*(MCWeight_singleLepCalc/abs(MCWeight_singleLepCalc))*xsecEff"
+--- DataSetFactory           : Create training and testing trees -- looping over class "Background" ...
+--- DataSetFactory           : Weight expression for class 'Background': "TrigEffWeight*pileupWeight*isoSF*lepIdSF*EGammaGsfSF*MuTrkSF*(MCWeight_singleLepCalc/abs(MCWeight_singleLepCalc))*xsecEff"
+--- DataSetFactory           : Number of events in input trees (after possible flattening of arrays):
+--- DataSetFactory           :     Signal          -- number of events       : 345858  / sum of weights: 0.012319
+--- DataSetFactory           :     Background      -- number of events       : 12203108  / sum of weights: 42.868
+--- DataSetFactory           :     Signal     tree -- total number of entries: 56656
+--- DataSetFactory           :     Background tree -- total number of entries: 2525157
+--- DataSetFactory           : Preselection: (will NOT affect number of requested training and testing events)
+--- DataSetFactory           :     Signal     requirement: "NJetsCSVwithSF_JetSubCalc >= 3"
+--- DataSetFactory           :     Signal          -- number of events passed: 145539  / sum of weights: 0.00527034
+--- DataSetFactory           :     Signal          -- efficiency             : 0.427823
+--- DataSetFactory           :     Background requirement: "NJetsCSVwithSF_JetSubCalc >= 3"
+--- DataSetFactory           :     Background      -- number of events passed: 1504119  / sum of weights: 5.21747
+--- DataSetFactory           :     Background      -- efficiency             : 0.12171
+--- DataSetFactory           :  you have opted for interpreting the requested number of training/testing events
+--- DataSetFactory           :  to be the number of events AFTER your preselection cuts
+--- DataSetFactory           :  you have opted for interpreting the requested number of training/testing events
+--- DataSetFactory           :  to be the number of events AFTER your preselection cuts
+--- DataSetFactory           : Weight renormalisation mode: "NumEvents": renormalises all event classes 
+--- DataSetFactory           :  such that the effective (weighted) number of events in each class equals the respective 
+--- DataSetFactory           :  number of events (entries) that you demanded in PrepareTrainingAndTestTree("","nTrain_Signal=.. )
+--- DataSetFactory           :  ... i.e. such that Sum[i=1..N_j]{w_i} = N_j, j=0,1,2...
+--- DataSetFactory           :  ... (note that N_j is the sum of TRAINING events (nTrain_j...with j=Signal,Background..
+--- DataSetFactory           :  ..... Testing events are not renormalised nor included in the renormalisation factor! )
+--- DataSetFactory           : --> Rescale Signal     event weights by factor: 2.74456e+07
+--- DataSetFactory           : --> Rescale Background event weights by factor: 287974
+--- DataSetFactory           : Number of training and testing events after rescaling:
+--- DataSetFactory           : ------------------------------------------------------
+--- DataSetFactory           : Signal     -- training events            : 72769 (sum of weights: 72769) - requested were 0 events
+--- DataSetFactory           : Signal     -- testing events             : 72769 (sum of weights: 0.00261863) - requested were 0 events
+--- DataSetFactory           : Signal     -- training and testing events: 145538 (sum of weights: 72769)
+--- DataSetFactory           : Signal     -- due to the preselection a scaling factor has been applied to the numbers of requested events: 0.420806
+--- DataSetFactory           : Background -- training events            : 752059 (sum of weights: 752059) - requested were 0 events
+--- DataSetFactory           : Background -- testing events             : 752059 (sum of weights: 2.60832) - requested were 0 events
+--- DataSetFactory           : Background -- training and testing events: 1504118 (sum of weights: 752062)
+--- DataSetFactory           : Background -- due to the preselection a scaling factor has been applied to the numbers of requested events: 0.123257
+--- DataSetFactory           : Create internal training tree
+--- DataSetFactory           : Create internal testing tree
+--- DataSetInfo              : Correlation matrix (Signal):
+--- DataSetInfo              : -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--- DataSetInfo              :                   mass_minBBdr mass_minLLdr lepDR_minBBdr mass_maxBBpt mass_maxBBmass mass_maxJJJpt aveBBdr theJetLeadPt   AK4HT BJetLeadPt AK4HTpMETpLepPt   topPt minDR_lepJet ptRel_lepJet MT_lepMet mass_lepJets deltaPhi_lepJets
+--- DataSetInfo              :     mass_minBBdr:       +1.000       +0.037        +0.025       +0.559         +0.449        +0.304  +0.415       +0.354  +0.334     +0.401          +0.315  +0.166       -0.033       +0.021    +0.008       +0.148           +0.010
+--- DataSetInfo              :     mass_minLLdr:       +0.037       +1.000        -0.013       +0.063         +0.045        +0.245  +0.009       +0.300  +0.234     +0.061          +0.227  +0.121       -0.031       +0.026    +0.033       +0.153           -0.015
+--- DataSetInfo              :    lepDR_minBBdr:       +0.025       -0.013        +1.000       +0.002         -0.009        -0.058  +0.068       -0.104  -0.120     -0.069          -0.082  -0.004       +0.221       +0.194    -0.019       +0.115           +0.008
+--- DataSetInfo              :     mass_maxBBpt:       +0.559       +0.063        +0.002       +1.000         +0.679        +0.371  +0.395       +0.394  +0.366     +0.417          +0.349  +0.135       -0.019       +0.014    +0.058       +0.169           +0.009
+--- DataSetInfo              :   mass_maxBBmass:       +0.449       +0.045        -0.009       +0.679         +1.000        +0.457  +0.437       +0.497  +0.541     +0.542          +0.504  +0.191       -0.026       +0.034    +0.056       +0.230           +0.029
+--- DataSetInfo              :    mass_maxJJJpt:       +0.304       +0.245        -0.058       +0.371         +0.457        +1.000  +0.228       +0.437  +0.435     +0.249          +0.438  +0.291       -0.059       +0.042    -0.034       +0.234           -0.006
+--- DataSetInfo              :          aveBBdr:       +0.415       +0.009        +0.068       +0.395         +0.437        +0.228  +1.000       +0.078  +0.049     -0.013          +0.036  -0.019       +0.080       +0.050    +0.053       +0.114           +0.005
+--- DataSetInfo              :     theJetLeadPt:       +0.354       +0.300        -0.104       +0.394         +0.497        +0.437  +0.078       +1.000  +0.725     +0.786          +0.737  +0.404       -0.113       +0.133    -0.103       +0.314           -0.008
+--- DataSetInfo              :            AK4HT:       +0.334       +0.234        -0.120       +0.366         +0.541        +0.435  +0.049       +0.725  +1.000     +0.575          +0.960  +0.429       -0.205       +0.070    -0.111       +0.303           +0.002
+--- DataSetInfo              :       BJetLeadPt:       +0.401       +0.061        -0.069       +0.417         +0.542        +0.249  -0.013       +0.786  +0.575     +1.000          +0.581  +0.310       -0.109       +0.048    -0.040       +0.185           +0.006
+--- DataSetInfo              :  AK4HTpMETpLepPt:       +0.315       +0.227        -0.082       +0.349         +0.504        +0.438  +0.036       +0.737  +0.960     +0.581          +1.000  +0.617       -0.210       +0.188    -0.067       +0.365           +0.008
+--- DataSetInfo              :            topPt:       +0.166       +0.121        -0.004       +0.135         +0.191        +0.291  -0.019       +0.404  +0.429     +0.310          +0.617  +1.000       -0.269       +0.282    -0.267       +0.317           +0.008
+--- DataSetInfo              :     minDR_lepJet:       -0.033       -0.031        +0.221       -0.019         -0.026        -0.059  +0.080       -0.113  -0.205     -0.109          -0.210  -0.269       +1.000       +0.437    -0.029       +0.071           -0.004
+--- DataSetInfo              :     ptRel_lepJet:       +0.021       +0.026        +0.194       +0.014         +0.034        +0.042  +0.050       +0.133  +0.070     +0.048          +0.188  +0.282       +0.437       +1.000    +0.087       +0.418           -0.007
+--- DataSetInfo              :        MT_lepMet:       +0.008       +0.033        -0.019       +0.058         +0.056        -0.034  +0.053       -0.103  -0.111     -0.040          -0.067  -0.267       -0.029       +0.087    +1.000       +0.054           +0.013
+--- DataSetInfo              :     mass_lepJets:       +0.148       +0.153        +0.115       +0.169         +0.230        +0.234  +0.114       +0.314  +0.303     +0.185          +0.365  +0.317       +0.071       +0.418    +0.054       +1.000           -0.003
+--- DataSetInfo              : deltaPhi_lepJets:       +0.010       -0.015        +0.008       +0.009         +0.029        -0.006  +0.005       -0.008  +0.002     +0.006          +0.008  +0.008       -0.004       -0.007    +0.013       -0.003           +1.000
+--- DataSetInfo              : -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--- DataSetInfo              : Correlation matrix (Background):
+--- DataSetInfo              : -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--- DataSetInfo              :                   mass_minBBdr mass_minLLdr lepDR_minBBdr mass_maxBBpt mass_maxBBmass mass_maxJJJpt aveBBdr theJetLeadPt   AK4HT BJetLeadPt AK4HTpMETpLepPt   topPt minDR_lepJet ptRel_lepJet MT_lepMet mass_lepJets deltaPhi_lepJets
+--- DataSetInfo              :     mass_minBBdr:       +1.000       +0.033        +0.011       +0.580         +0.476        +0.294  +0.433       +0.287  +0.332     +0.386          +0.320  +0.197       -0.102       -0.024    +0.019       +0.116           -0.002
+--- DataSetInfo              :     mass_minLLdr:       +0.033       +1.000        -0.083       +0.056         +0.061        +0.249  -0.051       +0.266  +0.307     +0.103          +0.293  +0.142       -0.103       -0.042    +0.002       +0.106           -0.009
+--- DataSetInfo              :    lepDR_minBBdr:       +0.011       -0.083        +1.000       -0.034         +0.014        -0.140  +0.061       -0.178  -0.169     -0.065          -0.130  +0.014       +0.295       +0.231    +0.011       +0.116           +0.006
+--- DataSetInfo              :     mass_maxBBpt:       +0.580       +0.056        -0.034       +1.000         +0.650        +0.438  +0.407       +0.409  +0.405     +0.524          +0.396  +0.227       -0.122       -0.020    -0.011       +0.162           -0.008
+--- DataSetInfo              :   mass_maxBBmass:       +0.476       +0.061        +0.014       +0.650         +1.000        +0.419  +0.442       +0.523  +0.534     +0.708          +0.517  +0.322       -0.184       -0.053    +0.012       +0.214           -0.007
+--- DataSetInfo              :    mass_maxJJJpt:       +0.294       +0.249        -0.140       +0.438         +0.419        +1.000  +0.130       +0.505  +0.540     +0.371          +0.530  +0.293       -0.164       -0.035    -0.021       +0.208           -0.007
+--- DataSetInfo              :          aveBBdr:       +0.433       -0.051        +0.061       +0.407         +0.442        +0.130  +1.000       -0.069  -0.048     +0.025          -0.061  -0.036       -0.057       -0.138    +0.014       +0.009           +0.004
+--- DataSetInfo              :     theJetLeadPt:       +0.287       +0.266        -0.178       +0.409         +0.523        +0.505  -0.069       +1.000  +0.881     +0.784          +0.887  +0.538       -0.255       +0.021    -0.029       +0.285           -0.018
+--- DataSetInfo              :            AK4HT:       +0.332       +0.307        -0.169       +0.405         +0.534        +0.540  -0.048       +0.881  +1.000     +0.705          +0.973  +0.496       -0.277       -0.011    -0.006       +0.276           -0.015
+--- DataSetInfo              :       BJetLeadPt:       +0.386       +0.103        -0.065       +0.524         +0.708        +0.371  +0.025       +0.784  +0.705     +1.000          +0.712  +0.464       -0.210       +0.034    -0.018       +0.247           -0.018
+--- DataSetInfo              :  AK4HTpMETpLepPt:       +0.320       +0.293        -0.130       +0.396         +0.517        +0.530  -0.061       +0.887  +0.973     +0.712          +1.000  +0.625       -0.250       +0.089    +0.030       +0.337           -0.016
+--- DataSetInfo              :            topPt:       +0.197       +0.142        +0.014       +0.227         +0.322        +0.293  -0.036       +0.538  +0.496     +0.464          +0.625  +1.000       -0.178       +0.201    -0.137       +0.336           -0.016
+--- DataSetInfo              :     minDR_lepJet:       -0.102       -0.103        +0.295       -0.122         -0.184        -0.164  -0.057       -0.255  -0.277     -0.210          -0.250  -0.178       +1.000       +0.584    +0.053       +0.073           -0.005
+--- DataSetInfo              :     ptRel_lepJet:       -0.024       -0.042        +0.231       -0.020         -0.053        -0.035  -0.138       +0.021  -0.011     +0.034          +0.089  +0.201       +0.584       +1.000    +0.173       +0.372           +0.007
+--- DataSetInfo              :        MT_lepMet:       +0.019       +0.002        +0.011       -0.011         +0.012        -0.021  +0.014       -0.029  -0.006     -0.018          +0.030  -0.137       +0.053       +0.173    +1.000       +0.077           +0.008
+--- DataSetInfo              :     mass_lepJets:       +0.116       +0.106        +0.116       +0.162         +0.214        +0.208  +0.009       +0.285  +0.276     +0.247          +0.337  +0.336       +0.073       +0.372    +0.077       +1.000           -0.014
+--- DataSetInfo              : deltaPhi_lepJets:       -0.002       -0.009        +0.006       -0.008         -0.007        -0.007  +0.004       -0.018  -0.015     -0.018          -0.016  -0.016       -0.005       +0.007    +0.008       -0.014           +1.000
+--- DataSetInfo              : -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--- DataSetFactory           :  
+--- Factory                  : 
+--- Factory                  : current transformation string: 'I'
+--- Factory                  : Create Transformation "I" with events from all classes.
+--- Id                       : Transformation, Variable selection : 
+--- Id                       : Input : variable 'mass_minBBdr' (index=0).   <---> Output : variable 'mass_minBBdr' (index=0).
+--- Id                       : Input : variable 'mass_minLLdr' (index=1).   <---> Output : variable 'mass_minLLdr' (index=1).
+--- Id                       : Input : variable 'lepDR_minBBdr' (index=2).   <---> Output : variable 'lepDR_minBBdr' (index=2).
+--- Id                       : Input : variable 'mass_maxBBpt' (index=3).   <---> Output : variable 'mass_maxBBpt' (index=3).
+--- Id                       : Input : variable 'mass_maxBBmass' (index=4).   <---> Output : variable 'mass_maxBBmass' (index=4).
+--- Id                       : Input : variable 'mass_maxJJJpt' (index=5).   <---> Output : variable 'mass_maxJJJpt' (index=5).
+--- Id                       : Input : variable 'aveBBdr' (index=6).   <---> Output : variable 'aveBBdr' (index=6).
+--- Id                       : Input : variable 'theJetLeadPt' (index=7).   <---> Output : variable 'theJetLeadPt' (index=7).
+--- Id                       : Input : variable 'AK4HT' (index=8).   <---> Output : variable 'AK4HT' (index=8).
+--- Id                       : Input : variable 'BJetLeadPt' (index=9).   <---> Output : variable 'BJetLeadPt' (index=9).
+--- Id                       : Input : variable 'AK4HTpMETpLepPt' (index=10).   <---> Output : variable 'AK4HTpMETpLepPt' (index=10).
+--- Id                       : Input : variable 'topPt' (index=11).   <---> Output : variable 'topPt' (index=11).
+--- Id                       : Input : variable 'minDR_lepJet' (index=12).   <---> Output : variable 'minDR_lepJet' (index=12).
+--- Id                       : Input : variable 'ptRel_lepJet' (index=13).   <---> Output : variable 'ptRel_lepJet' (index=13).
+--- Id                       : Input : variable 'MT_lepMet' (index=14).   <---> Output : variable 'MT_lepMet' (index=14).
+--- Id                       : Input : variable 'mass_lepJets' (index=15).   <---> Output : variable 'mass_lepJets' (index=15).
+--- Id                       : Input : variable 'deltaPhi_lepJets' (index=16).   <---> Output : variable 'deltaPhi_lepJets' (index=16).
+--- Factory                  : 
+--- Factory                  : current transformation string: 'D'
+--- Factory                  : Create Transformation "D" with events from all classes.
+--- Deco                     : Transformation, Variable selection : 
+--- Deco                     : Input : variable 'mass_minBBdr' (index=0).   <---> Output : variable 'mass_minBBdr' (index=0).
+--- Deco                     : Input : variable 'mass_minLLdr' (index=1).   <---> Output : variable 'mass_minLLdr' (index=1).
+--- Deco                     : Input : variable 'lepDR_minBBdr' (index=2).   <---> Output : variable 'lepDR_minBBdr' (index=2).
+--- Deco                     : Input : variable 'mass_maxBBpt' (index=3).   <---> Output : variable 'mass_maxBBpt' (index=3).
+--- Deco                     : Input : variable 'mass_maxBBmass' (index=4).   <---> Output : variable 'mass_maxBBmass' (index=4).
+--- Deco                     : Input : variable 'mass_maxJJJpt' (index=5).   <---> Output : variable 'mass_maxJJJpt' (index=5).
+--- Deco                     : Input : variable 'aveBBdr' (index=6).   <---> Output : variable 'aveBBdr' (index=6).
+--- Deco                     : Input : variable 'theJetLeadPt' (index=7).   <---> Output : variable 'theJetLeadPt' (index=7).
+--- Deco                     : Input : variable 'AK4HT' (index=8).   <---> Output : variable 'AK4HT' (index=8).
+--- Deco                     : Input : variable 'BJetLeadPt' (index=9).   <---> Output : variable 'BJetLeadPt' (index=9).
+--- Deco                     : Input : variable 'AK4HTpMETpLepPt' (index=10).   <---> Output : variable 'AK4HTpMETpLepPt' (index=10).
+--- Deco                     : Input : variable 'topPt' (index=11).   <---> Output : variable 'topPt' (index=11).
+--- Deco                     : Input : variable 'minDR_lepJet' (index=12).   <---> Output : variable 'minDR_lepJet' (index=12).
+--- Deco                     : Input : variable 'ptRel_lepJet' (index=13).   <---> Output : variable 'ptRel_lepJet' (index=13).
+--- Deco                     : Input : variable 'MT_lepMet' (index=14).   <---> Output : variable 'MT_lepMet' (index=14).
+--- Deco                     : Input : variable 'mass_lepJets' (index=15).   <---> Output : variable 'mass_lepJets' (index=15).
+--- Deco                     : Input : variable 'deltaPhi_lepJets' (index=16).   <---> Output : variable 'deltaPhi_lepJets' (index=16).
+--- Factory                  : 
+--- Factory                  : current transformation string: 'P'
+--- Factory                  : Create Transformation "P" with events from all classes.
+--- PCA                      : Transformation, Variable selection : 
+--- PCA                      : Input : variable 'mass_minBBdr' (index=0).   <---> Output : variable 'mass_minBBdr' (index=0).
+--- PCA                      : Input : variable 'mass_minLLdr' (index=1).   <---> Output : variable 'mass_minLLdr' (index=1).
+--- PCA                      : Input : variable 'lepDR_minBBdr' (index=2).   <---> Output : variable 'lepDR_minBBdr' (index=2).
+--- PCA                      : Input : variable 'mass_maxBBpt' (index=3).   <---> Output : variable 'mass_maxBBpt' (index=3).
+--- PCA                      : Input : variable 'mass_maxBBmass' (index=4).   <---> Output : variable 'mass_maxBBmass' (index=4).
+--- PCA                      : Input : variable 'mass_maxJJJpt' (index=5).   <---> Output : variable 'mass_maxJJJpt' (index=5).
+--- PCA                      : Input : variable 'aveBBdr' (index=6).   <---> Output : variable 'aveBBdr' (index=6).
+--- PCA                      : Input : variable 'theJetLeadPt' (index=7).   <---> Output : variable 'theJetLeadPt' (index=7).
+--- PCA                      : Input : variable 'AK4HT' (index=8).   <---> Output : variable 'AK4HT' (index=8).
+--- PCA                      : Input : variable 'BJetLeadPt' (index=9).   <---> Output : variable 'BJetLeadPt' (index=9).
+--- PCA                      : Input : variable 'AK4HTpMETpLepPt' (index=10).   <---> Output : variable 'AK4HTpMETpLepPt' (index=10).
+--- PCA                      : Input : variable 'topPt' (index=11).   <---> Output : variable 'topPt' (index=11).
+--- PCA                      : Input : variable 'minDR_lepJet' (index=12).   <---> Output : variable 'minDR_lepJet' (index=12).
+--- PCA                      : Input : variable 'ptRel_lepJet' (index=13).   <---> Output : variable 'ptRel_lepJet' (index=13).
+--- PCA                      : Input : variable 'MT_lepMet' (index=14).   <---> Output : variable 'MT_lepMet' (index=14).
+--- PCA                      : Input : variable 'mass_lepJets' (index=15).   <---> Output : variable 'mass_lepJets' (index=15).
+--- PCA                      : Input : variable 'deltaPhi_lepJets' (index=16).   <---> Output : variable 'deltaPhi_lepJets' (index=16).
+--- Factory                  : 
+--- Factory                  : current transformation string: 'G,D'
+--- Factory                  : Create Transformation "G" with events from all classes.
+--- Gauss                    : Transformation, Variable selection : 
+--- Gauss                    : Input : variable 'mass_minBBdr' (index=0).   <---> Output : variable 'mass_minBBdr' (index=0).
+--- Gauss                    : Input : variable 'mass_minLLdr' (index=1).   <---> Output : variable 'mass_minLLdr' (index=1).
+--- Gauss                    : Input : variable 'lepDR_minBBdr' (index=2).   <---> Output : variable 'lepDR_minBBdr' (index=2).
+--- Gauss                    : Input : variable 'mass_maxBBpt' (index=3).   <---> Output : variable 'mass_maxBBpt' (index=3).
+--- Gauss                    : Input : variable 'mass_maxBBmass' (index=4).   <---> Output : variable 'mass_maxBBmass' (index=4).
+--- Gauss                    : Input : variable 'mass_maxJJJpt' (index=5).   <---> Output : variable 'mass_maxJJJpt' (index=5).
+--- Gauss                    : Input : variable 'aveBBdr' (index=6).   <---> Output : variable 'aveBBdr' (index=6).
+--- Gauss                    : Input : variable 'theJetLeadPt' (index=7).   <---> Output : variable 'theJetLeadPt' (index=7).
+--- Gauss                    : Input : variable 'AK4HT' (index=8).   <---> Output : variable 'AK4HT' (index=8).
+--- Gauss                    : Input : variable 'BJetLeadPt' (index=9).   <---> Output : variable 'BJetLeadPt' (index=9).
+--- Gauss                    : Input : variable 'AK4HTpMETpLepPt' (index=10).   <---> Output : variable 'AK4HTpMETpLepPt' (index=10).
+--- Gauss                    : Input : variable 'topPt' (index=11).   <---> Output : variable 'topPt' (index=11).
+--- Gauss                    : Input : variable 'minDR_lepJet' (index=12).   <---> Output : variable 'minDR_lepJet' (index=12).
+--- Gauss                    : Input : variable 'ptRel_lepJet' (index=13).   <---> Output : variable 'ptRel_lepJet' (index=13).
+--- Gauss                    : Input : variable 'MT_lepMet' (index=14).   <---> Output : variable 'MT_lepMet' (index=14).
+--- Gauss                    : Input : variable 'mass_lepJets' (index=15).   <---> Output : variable 'mass_lepJets' (index=15).
+--- Gauss                    : Input : variable 'deltaPhi_lepJets' (index=16).   <---> Output : variable 'deltaPhi_lepJets' (index=16).
+--- Factory                  : Create Transformation "D" with events from all classes.
+--- Deco                     : Transformation, Variable selection : 
+--- Deco                     : Input : variable 'mass_minBBdr' (index=0).   <---> Output : variable 'mass_minBBdr' (index=0).
+--- Deco                     : Input : variable 'mass_minLLdr' (index=1).   <---> Output : variable 'mass_minLLdr' (index=1).
+--- Deco                     : Input : variable 'lepDR_minBBdr' (index=2).   <---> Output : variable 'lepDR_minBBdr' (index=2).
+--- Deco                     : Input : variable 'mass_maxBBpt' (index=3).   <---> Output : variable 'mass_maxBBpt' (index=3).
+--- Deco                     : Input : variable 'mass_maxBBmass' (index=4).   <---> Output : variable 'mass_maxBBmass' (index=4).
+--- Deco                     : Input : variable 'mass_maxJJJpt' (index=5).   <---> Output : variable 'mass_maxJJJpt' (index=5).
+--- Deco                     : Input : variable 'aveBBdr' (index=6).   <---> Output : variable 'aveBBdr' (index=6).
+--- Deco                     : Input : variable 'theJetLeadPt' (index=7).   <---> Output : variable 'theJetLeadPt' (index=7).
+--- Deco                     : Input : variable 'AK4HT' (index=8).   <---> Output : variable 'AK4HT' (index=8).
+--- Deco                     : Input : variable 'BJetLeadPt' (index=9).   <---> Output : variable 'BJetLeadPt' (index=9).
+--- Deco                     : Input : variable 'AK4HTpMETpLepPt' (index=10).   <---> Output : variable 'AK4HTpMETpLepPt' (index=10).
+--- Deco                     : Input : variable 'topPt' (index=11).   <---> Output : variable 'topPt' (index=11).
+--- Deco                     : Input : variable 'minDR_lepJet' (index=12).   <---> Output : variable 'minDR_lepJet' (index=12).
+--- Deco                     : Input : variable 'ptRel_lepJet' (index=13).   <---> Output : variable 'ptRel_lepJet' (index=13).
+--- Deco                     : Input : variable 'MT_lepMet' (index=14).   <---> Output : variable 'MT_lepMet' (index=14).
+--- Deco                     : Input : variable 'mass_lepJets' (index=15).   <---> Output : variable 'mass_lepJets' (index=15).
+--- Deco                     : Input : variable 'deltaPhi_lepJets' (index=16).   <---> Output : variable 'deltaPhi_lepJets' (index=16).
+--- Id                       : Preparing the Identity transformation...
+--- TFHandler_Factory        : ---------------------------------------------------------------------------------------------------
+--- TFHandler_Factory        :         Variable                Mean                RMS        [        Min                Max ]
+--- TFHandler_Factory        : ---------------------------------------------------------------------------------------------------
+--- TFHandler_Factory        :     mass_minBBdr:            110.25            69.656   [            13.899            2138.3 ]
+--- TFHandler_Factory        :     mass_minLLdr:            82.621            109.37   [            0.0000            3297.8 ]
+--- TFHandler_Factory        :    lepDR_minBBdr:            2.2545           0.91479   [         0.0022186            8.5428 ]
+--- TFHandler_Factory        :     mass_maxBBpt:            154.03            120.51   [            13.899            2795.1 ]
+--- TFHandler_Factory        :   mass_maxBBmass:            261.27            166.27   [            21.600            3443.1 ]
+--- TFHandler_Factory        :    mass_maxJJJpt:            291.13            208.70   [            33.190            4502.7 ]
+--- TFHandler_Factory        :          aveBBdr:            2.2470           0.47658   [           0.41395            4.1727 ]
+--- TFHandler_Factory        :     theJetLeadPt:            172.75            111.10   [            50.021            2446.9 ]
+--- TFHandler_Factory        :            AK4HT:            492.06            270.52   [            145.58            5390.0 ]
+--- TFHandler_Factory        :       BJetLeadPt:            143.89            91.500   [            30.758            2099.7 ]
+--- TFHandler_Factory        :  AK4HTpMETpLepPt:            650.96            311.03   [            223.40            5715.5 ]
+--- TFHandler_Factory        :            topPt:            157.19            112.56   [           0.34116            6426.1 ]
+--- TFHandler_Factory        :     minDR_lepJet:            1.0274           0.54567   [        0.00026326            4.1970 ]
+--- TFHandler_Factory        :     ptRel_lepJet:            67.577            62.245   [          0.026565            1411.3 ]
+--- TFHandler_Factory        :        MT_lepMet:            70.746            44.302   [         0.0010013            1340.9 ]
+--- TFHandler_Factory        :     mass_lepJets:            155.21            116.49   [            2.0953            3147.9 ]
+--- TFHandler_Factory        : deltaPhi_lepJets:          0.021526            1.9961   [           -3.1416            3.1416 ]
+--- TFHandler_Factory        : ---------------------------------------------------------------------------------------------------
+--- TFHandler_Factory        : Plot event variables for Id
+--- TFHandler_Factory        : Create scatter and profile plots in target-file directory: 
+--- TFHandler_Factory        : TMVA.root:/InputVariables_Id/CorrelationPlots
+--- Deco                     : Preparing the Decorrelation transformation...
+--- TFHandler_Factory        : ---------------------------------------------------------------------------------------------------
+--- TFHandler_Factory        :         Variable                Mean                RMS        [        Min                Max ]
+--- TFHandler_Factory        : ---------------------------------------------------------------------------------------------------
+--- TFHandler_Factory        :     mass_minBBdr:           0.89709            1.0000   [           -8.1809            27.783 ]
+--- TFHandler_Factory        :     mass_minLLdr:           0.34182            1.0000   [           -3.9842            30.012 ]
+--- TFHandler_Factory        :    lepDR_minBBdr:            2.3832            1.0000   [           -2.2523            9.6792 ]
+--- TFHandler_Factory        :     mass_maxBBpt:           0.30137            1.0000   [           -9.9842            21.023 ]
+--- TFHandler_Factory        :   mass_maxBBmass:           0.74127            1.0000   [           -4.5433            23.441 ]
+--- TFHandler_Factory        :    mass_maxJJJpt:           0.65145            1.0000   [           -5.0014            21.871 ]
+--- TFHandler_Factory        :          aveBBdr:            5.8133            1.0000   [           -10.448            13.298 ]
+--- TFHandler_Factory        :     theJetLeadPt:         -0.090992            1.0000   [           -7.9143            24.669 ]
+--- TFHandler_Factory        :            AK4HT:           0.35645            1.0000   [           -10.355            26.467 ]
+--- TFHandler_Factory        :       BJetLeadPt:           0.33113            1.0000   [           -12.225            15.147 ]
+--- TFHandler_Factory        :  AK4HTpMETpLepPt:            1.9501            1.0000   [           -25.925            20.023 ]
+--- TFHandler_Factory        :            topPt:           0.30832            1.0000   [           -8.0372            80.842 ]
+--- TFHandler_Factory        :     minDR_lepJet:            2.3941            1.0000   [           -12.773            21.271 ]
+--- TFHandler_Factory        :     ptRel_lepJet:           0.66955            1.0000   [           -7.9054            24.351 ]
+--- TFHandler_Factory        :        MT_lepMet:            1.3911            1.0000   [           -2.6084            44.162 ]
+--- TFHandler_Factory        :     mass_lepJets:           0.63193            1.0000   [           -6.7219            27.606 ]
+--- TFHandler_Factory        : deltaPhi_lepJets:          0.026915            1.0000   [           -1.7075            2.1010 ]
+--- TFHandler_Factory        : ---------------------------------------------------------------------------------------------------
+--- TFHandler_Factory        : Plot event variables for Deco
+--- TFHandler_Factory        : Create scatter and profile plots in target-file directory: 
+--- TFHandler_Factory        : TMVA.root:/InputVariables_Deco/CorrelationPlots
+--- PCA                      : Preparing the Principle Component (PCA) transformation...
+--- TFHandler_Factory        : ---------------------------------------------------------------------------------------------------
+--- TFHandler_Factory        :         Variable                Mean                RMS        [        Min                Max ]
+--- TFHandler_Factory        : ---------------------------------------------------------------------------------------------------
+--- TFHandler_Factory        :     mass_minBBdr:            113.99            467.05   [           -7946.0            765.76 ]
+--- TFHandler_Factory        :     mass_minLLdr:           -9.9633            177.60   [           -3354.3            1550.0 ]
+--- TFHandler_Factory        :    lepDR_minBBdr:            13.860            149.47   [           -2369.1            2503.5 ]
+--- TFHandler_Factory        :     mass_maxBBpt:           -5.7770            118.22   [           -1535.3            4091.8 ]
+--- TFHandler_Factory        :   mass_maxBBmass:           -2.0187            96.263   [           -2025.0            3657.3 ]
+--- TFHandler_Factory        :    mass_maxJJJpt:           -2.3065            97.322   [           -1021.8            2564.8 ]
+--- TFHandler_Factory        :          aveBBdr:            3.6505            82.876   [           -1562.2            1290.3 ]
+--- TFHandler_Factory        :     theJetLeadPt:           -6.1215            60.893   [           -855.67            719.99 ]
+--- TFHandler_Factory        :            AK4HT:           0.73974            52.711   [           -1075.2            879.79 ]
+--- TFHandler_Factory        :       BJetLeadPt:           -1.6152            53.970   [           -350.59            1653.4 ]
+--- TFHandler_Factory        :  AK4HTpMETpLepPt:           -1.7663            47.562   [           -1043.4            1350.5 ]
+--- TFHandler_Factory        :            topPt:          -0.41982            36.009   [           -438.02            881.35 ]
+--- TFHandler_Factory        :     minDR_lepJet:          -0.38994            26.166   [           -1797.8            433.28 ]
+--- TFHandler_Factory        :     ptRel_lepJet:          0.021665            1.9961   [           -3.1861            3.2047 ]
+--- TFHandler_Factory        :        MT_lepMet:          0.083880           0.86266   [           -6.1087            4.8979 ]
+--- TFHandler_Factory        :     mass_lepJets:         -0.021967           0.40155   [           -4.5679            6.6474 ]
+--- TFHandler_Factory        : deltaPhi_lepJets:         -0.018622           0.34906   [           -4.7523            2.3887 ]
+--- TFHandler_Factory        : ---------------------------------------------------------------------------------------------------
+--- TFHandler_Factory        : Plot event variables for PCA
+--- TFHandler_Factory        : Create scatter and profile plots in target-file directory: 
+--- TFHandler_Factory        : TMVA.root:/InputVariables_PCA/CorrelationPlots
+--- Gauss                    : Preparing the Gaussian transformation...
+--- Deco                     : Preparing the Decorrelation transformation...
+--- TFHandler_Factory        : ---------------------------------------------------------------------------------------------------
+--- TFHandler_Factory        :         Variable                Mean                RMS        [        Min                Max ]
+--- TFHandler_Factory        : ---------------------------------------------------------------------------------------------------
+--- TFHandler_Factory        :     mass_minBBdr:         -0.020230            1.0000   [           -5.3576            4.7994 ]
+--- TFHandler_Factory        :     mass_minLLdr:          -0.53193            1.0000   [           -2.8985            2.1698 ]
+--- TFHandler_Factory        :    lepDR_minBBdr:        -0.0048927            1.0000   [           -4.6911            6.0161 ]
+--- TFHandler_Factory        :     mass_maxBBpt:         0.0071355            1.0000   [           -5.5904            5.5293 ]
+--- TFHandler_Factory        :   mass_maxBBmass:         -0.073285            1.0000   [           -5.8228            7.8090 ]
+--- TFHandler_Factory        :    mass_maxJJJpt:         0.0020129            1.0000   [           -5.1104            5.7307 ]
+--- TFHandler_Factory        :          aveBBdr:          0.054144            1.0000   [           -4.7145            6.9915 ]
+--- TFHandler_Factory        :     theJetLeadPt:         -0.066157            1.0000   [           -5.7925            6.8436 ]
+--- TFHandler_Factory        :            AK4HT:           0.28121            1.0000   [           -14.591            8.8684 ]
+--- TFHandler_Factory        :       BJetLeadPt:         -0.041421            1.0000   [           -8.9527            5.6923 ]
+--- TFHandler_Factory        :  AK4HTpMETpLepPt:           0.14821            1.0000   [           -12.978            10.066 ]
+--- TFHandler_Factory        :            topPt:         -0.027635            1.0000   [           -7.3792            7.1846 ]
+--- TFHandler_Factory        :     minDR_lepJet:        -0.0074828            1.0000   [           -3.4580            8.2045 ]
+--- TFHandler_Factory        :     ptRel_lepJet:          0.010360            1.0000   [           -6.3342            7.0828 ]
+--- TFHandler_Factory        :        MT_lepMet:        -0.0014637            1.0000   [           -3.3388            7.0916 ]
+--- TFHandler_Factory        :     mass_lepJets:        -0.0022465            1.0000   [           -5.2727            6.0540 ]
+--- TFHandler_Factory        : deltaPhi_lepJets:        -0.0024017            1.0000   [           -4.1314            5.7598 ]
+--- TFHandler_Factory        : ---------------------------------------------------------------------------------------------------
+--- TFHandler_Factory        : Plot event variables for Gauss_Deco
+--- TFHandler_Factory        : Create scatter and profile plots in target-file directory: 
+--- TFHandler_Factory        : TMVA.root:/InputVariables_Gauss_Deco/CorrelationPlots
+--- TFHandler_Factory        :  
+--- TFHandler_Factory        : Ranking input variables (method unspecific)...
+--- IdTransformation         : Ranking result (top variable is best ranked)
+--- IdTransformation         : -----------------------------------------
+--- IdTransformation         : Rank : Variable         : Separation
+--- IdTransformation         : -----------------------------------------
+--- IdTransformation         :    1 : theJetLeadPt     : 6.030e-01
+--- IdTransformation         :    2 : AK4HT            : 2.626e-01
+--- IdTransformation         :    3 : AK4HTpMETpLepPt  : 2.619e-01
+--- IdTransformation         :    4 : BJetLeadPt       : 1.875e-01
+--- IdTransformation         :    5 : mass_maxBBmass   : 1.602e-01
+--- IdTransformation         :    6 : mass_maxBBpt     : 1.447e-01
+--- IdTransformation         :    7 : mass_maxJJJpt    : 1.057e-01
+--- IdTransformation         :    8 : mass_minBBdr     : 1.033e-01
+--- IdTransformation         :    9 : mass_minLLdr     : 8.376e-02
+--- IdTransformation         :   10 : minDR_lepJet     : 5.249e-02
+--- IdTransformation         :   11 : ptRel_lepJet     : 4.372e-02
+--- IdTransformation         :   12 : aveBBdr          : 3.497e-02
+--- IdTransformation         :   13 : topPt            : 3.168e-02
+--- IdTransformation         :   14 : mass_lepJets     : 2.834e-02
+--- IdTransformation         :   15 : MT_lepMet        : 1.276e-02
+--- IdTransformation         :   16 : lepDR_minBBdr    : 1.257e-02
+--- IdTransformation         :   17 : deltaPhi_lepJets : 6.937e-03
+--- IdTransformation         : -----------------------------------------
+--- Factory                  :  
+--- Factory                  : Train all methods for Classification ...
+--- Factory                  : Train method: BDT for Classification
+--- BDT                      : Begin training
+--- BDT                      :  found and suggest the following possible pre-selection cuts 
+--- BDT                      : as option DoPreselection was not used, these cuts however will not be performed, but the training will see the full sample
+[1;31m--- <WARNING> BDT                      : Events with negative event weights are USED during the BDT training. This might cause problems with small node sizes or with the boosting. Please remove negative events from training using the option *IgnoreEventsWithNegWeightsInTraining* in case you observe problems with the boosting[0m
+--- BDT                      : <InitEventSample> For classification trees, 
+--- BDT                      :  the effective number of backgrounds is scaled to match 
+--- BDT                      :  the signal. Othersise the first boosting step would do 'just that'!
+--- BDT                      : re-normlise events such that Sig and Bkg have respective sum of weights = 1
+--- BDT                      :   sig->sig*5.66744ev. bkg->bkg*0.54838ev.
+--- BDT                      : #events: (reweighted) sig: 412414 bkg: 412414
+--- BDT                      : #events: (unweighted) sig: 72769 bkg: 752059
+--- BDT                      : Training 150 Decision Trees ... patience please
+--- BinaryTree               : The minimal node size MinNodeSize=2.5 fMinNodeSize=2.5% is translated to an actual number of events = 10300.5 for the training sample size of 412019
+--- BinaryTree               : Note: This number will be taken as absolute minimum in the node, 
+--- BinaryTree               :       in terms of 'weighted events' and unweighted ones !! 
+--- BDT                      : <Train> elapsed time: [1;31m176 sec[0m                              
+--- BDT                      : <Train> average number of nodes (w/o pruning) : 8
+--- BDT                      : End of training                                              
+--- BDT                      : Elapsed time for training with 824828 events: [1;31m205 sec[0m         
+--- BDT                      : Create MVA output for classification on training sample
+--- BDT                      : Evaluation of BDT on training sample (824828 events)
+--- BDT                      : Elapsed time for evaluation of 824828 events: [1;31m13.7 sec[0m       
+--- BDT                      : Creating weight file in xml format: [0;36mweights/TMVAClassification_BDT.weights.xml[0m
+--- BDT                      : Creating standalone response class: [0;36mweights/TMVAClassification_BDT.class.C[0m
+--- BDT                      : Write monitoring histograms to file: TMVA.root:/Method_BDT/BDT
+--- Factory                  : Training finished
+--- Factory                  : 
+--- Factory                  : Ranking input variables (method specific)...
+--- BDT                      : Ranking result (top variable is best ranked)
+--- BDT                      : --------------------------------------------------
+--- BDT                      : Rank : Variable         : Variable Importance
+--- BDT                      : --------------------------------------------------
+--- BDT                      :    1 : AK4HTpMETpLepPt  : 1.489e-01
+--- BDT                      :    2 : AK4HT            : 1.446e-01
+--- BDT                      :    3 : minDR_lepJet     : 7.647e-02
+--- BDT                      :    4 : mass_maxBBmass   : 7.435e-02
+--- BDT                      :    5 : mass_maxJJJpt    : 6.251e-02
+--- BDT                      :    6 : topPt            : 5.412e-02
+--- BDT                      :    7 : aveBBdr          : 4.970e-02
+--- BDT                      :    8 : ptRel_lepJet     : 4.902e-02
+--- BDT                      :    9 : mass_maxBBpt     : 4.605e-02
+--- BDT                      :   10 : mass_minBBdr     : 4.455e-02
+--- BDT                      :   11 : theJetLeadPt     : 4.391e-02
+--- BDT                      :   12 : mass_minLLdr     : 4.267e-02
+--- BDT                      :   13 : BJetLeadPt       : 4.258e-02
+--- BDT                      :   14 : lepDR_minBBdr    : 4.193e-02
+--- BDT                      :   15 : MT_lepMet        : 3.056e-02
+--- BDT                      :   16 : mass_lepJets     : 2.628e-02
+--- BDT                      :   17 : deltaPhi_lepJets : 2.177e-02
+--- BDT                      : --------------------------------------------------
+--- Factory                  : 
+--- Factory                  : === Destroy and recreate all methods via weight files for testing ===
+--- Factory                  : 
+--- MethodBase               : Reading weight file: [0;36mweights/TMVAClassification_BDT.weights.xml[0m
+--- BDT                      : Read method "BDT" of type "BDT"
+--- BDT                      : MVA method was trained with TMVA Version: 4.2.0
+--- BDT                      : MVA method was trained with ROOT Version: 5.34/18
+--- Factory                  : Test all methods...
+--- Factory                  : Test method: BDT for Classification performance
+--- BDT                      : Evaluation of BDT on testing sample (824828 events)
+--- BDT                      : Elapsed time for evaluation of 824828 events: [1;31m13.3 sec[0m       
+--- Factory                  : Evaluate all methods...
+--- Factory                  : Evaluate classifier: BDT
+--- BDT                      : Loop over test events and fill histograms with classifier response...
+--- Factory                  : Write evaluation histograms to file
+--- TFHandler_BDT            : Plot event variables for BDT
+--- TFHandler_BDT            : ---------------------------------------------------------------------------------------------------
+--- TFHandler_BDT            :         Variable                Mean                RMS        [        Min                Max ]
+--- TFHandler_BDT            : ---------------------------------------------------------------------------------------------------
+--- TFHandler_BDT            :     mass_minBBdr:            106.61            64.523   [            13.899            2138.3 ]
+--- TFHandler_BDT            :     mass_minLLdr:            78.550            105.80   [            0.0000            3297.8 ]
+--- TFHandler_BDT            :    lepDR_minBBdr:            2.2481           0.92196   [         0.0022186            8.5428 ]
+--- TFHandler_BDT            :     mass_maxBBpt:            146.38            113.57   [            13.899            2795.1 ]
+--- TFHandler_BDT            :   mass_maxBBmass:            253.87            163.39   [            21.600            3443.1 ]
+--- TFHandler_BDT            :    mass_maxJJJpt:            283.64            202.98   [            33.190            4502.7 ]
+--- TFHandler_BDT            :          aveBBdr:            2.2581           0.48286   [           0.41395            4.1727 ]
+--- TFHandler_BDT            :     theJetLeadPt:            166.60            111.70   [            50.018            2446.9 ]
+--- TFHandler_BDT            :            AK4HT:            471.50            267.41   [            146.87            5390.0 ]
+--- TFHandler_BDT            :       BJetLeadPt:            138.33            90.255   [            30.758            2099.7 ]
+--- TFHandler_BDT            :  AK4HTpMETpLepPt:            627.98            306.93   [            223.40            5715.5 ]
+--- TFHandler_BDT            :            topPt:            153.81            111.32   [           0.34116            6426.1 ]
+--- TFHandler_BDT            :     minDR_lepJet:            1.0166           0.54834   [        0.00026326            4.1970 ]
+--- TFHandler_BDT            :     ptRel_lepJet:            65.035            56.513   [          0.026565            1411.3 ]
+--- TFHandler_BDT            :        MT_lepMet:            69.543            43.656   [        0.00048051            1340.9 ]
+--- TFHandler_BDT            :     mass_lepJets:            154.17            119.88   [            2.1431            3426.6 ]
+--- TFHandler_BDT            : deltaPhi_lepJets:          0.012051            2.0151   [           -3.1416            3.1416 ]
+--- TFHandler_BDT            : ---------------------------------------------------------------------------------------------------
+--- TFHandler_BDT            : Create scatter and profile plots in target-file directory: 
+--- TFHandler_BDT            : TMVA.root:/Method_BDT/BDT/CorrelationPlots
+--- Factory                  : Correlations between input variables and MVA response (signal):
+--- Factory                  : ----------------
+--- Factory                  :                       BDT
+--- Factory                  :     mass_minBBdr:  +0.360
+--- Factory                  :     mass_minLLdr:  +0.031
+--- Factory                  :    lepDR_minBBdr:  -0.068
+--- Factory                  :     mass_maxBBpt:  +0.344
+--- Factory                  :   mass_maxBBmass:  +0.274
+--- Factory                  :    mass_maxJJJpt:  +0.276
+--- Factory                  :          aveBBdr:  +0.085
+--- Factory                  :     theJetLeadPt:  +0.322
+--- Factory                  :            AK4HT:  +0.492
+--- Factory                  :       BJetLeadPt:  +0.341
+--- Factory                  :  AK4HTpMETpLepPt:  +0.463
+--- Factory                  :            topPt:  +0.016
+--- Factory                  :     minDR_lepJet:  +0.001
+--- Factory                  :     ptRel_lepJet:  +0.061
+--- Factory                  :        MT_lepMet:  +0.112
+--- Factory                  :     mass_lepJets:  +0.100
+--- Factory                  : deltaPhi_lepJets:  +0.018
+--- Factory                  : ----------------
+--- Factory                  : 
+--- Factory                  : Correlations between input variables and MVA response (background):
+--- Factory                  : ----------------
+--- Factory                  :                       BDT
+--- Factory                  :     mass_minBBdr:  +0.393
+--- Factory                  :     mass_minLLdr:  +0.274
+--- Factory                  :    lepDR_minBBdr:  -0.072
+--- Factory                  :     mass_maxBBpt:  +0.407
+--- Factory                  :   mass_maxBBmass:  +0.450
+--- Factory                  :    mass_maxJJJpt:  +0.424
+--- Factory                  :          aveBBdr:  +0.135
+--- Factory                  :     theJetLeadPt:  +0.543
+--- Factory                  :            AK4HT:  +0.678
+--- Factory                  :       BJetLeadPt:  +0.481
+--- Factory                  :  AK4HTpMETpLepPt:  +0.664
+--- Factory                  :            topPt:  +0.347
+--- Factory                  :     minDR_lepJet:  -0.197
+--- Factory                  :     ptRel_lepJet:  +0.112
+--- Factory                  :        MT_lepMet:  +0.080
+--- Factory                  :     mass_lepJets:  +0.247
+--- Factory                  : deltaPhi_lepJets:  +0.007
+--- Factory                  : ----------------
+--- Factory                  : 
+--- Factory                  : The following "overlap" matrices contain the fraction of events for which 
+--- Factory                  : the MVAs 'i' and 'j' have returned conform answers about "signal-likeness"
+--- Factory                  : An event is signal-like, if its MVA output exceeds the following value:
+--- Factory                  : --------------------
+--- Factory                  :  Method:  Cut value:
+--- Factory                  : --------------------
+--- Factory                  :     BDT:     +0.208
+--- Factory                  : --------------------
+--- Factory                  : which correspond to the working point: eff(signal) = 1 - eff(background)
+--- Factory                  : 
+--- Factory                  : Evaluation results ranked by best signal efficiency and purity (area)
+--- Factory                  : --------------------------------------------------------------------------------
+--- Factory                  : MVA              Signal efficiency at bkg eff.(error):       | Sepa-    Signifi- 
+--- Factory                  : Method:          @B=0.01    @B=0.10    @B=0.30    ROC-integ. | ration:  cance:   
+--- Factory                  : --------------------------------------------------------------------------------
+--- Factory                  : BDT            : 0.095(5729)  0.491(9769)  0.831(7323)    0.843    | 0.365    1.040
+--- Factory                  : --------------------------------------------------------------------------------
+--- Factory                  : 
+--- Factory                  : Testing efficiency compared to training efficiency (overtraining check)
+--- Factory                  : --------------------------------------------------------------------------------
+--- Factory                  : MVA              Signal efficiency: from test sample (from training sample) 
+--- Factory                  : Method:          @B=0.01             @B=0.10            @B=0.30   
+--- Factory                  : --------------------------------------------------------------------------------
+--- Factory                  : BDT            : 0.095 (0.099)       0.491 (0.496)      0.831 (0.830)
+--- Factory                  : --------------------------------------------------------------------------------
+--- Factory                  : 
+--- Dataset:Default          : Created tree 'TestTree' with 824828 events
+--- Dataset:Default          : Created tree 'TrainTree' with 824828 events
+--- Factory                  :   
+--- Factory                  : [1mThank you for using TMVA![0m
+--- Factory                  : [1mFor citation information, please visit: http://tmva.sf.net/citeTMVA.html[0m
+--- Launch TMVA GUI to view input file: TMVA.root
+=== Note: inactive buttons indicate classifiers that were not trained, ===
+===       or functionalities that were not invoked during the training ===
+--- Opening root file TMVA.root in read mode
+--- Found directory: Method_BDT
+--- Classifier: BDT
+--- ==================================================================================================
+--- Classifier   (  #signal, #backgr.)  Optimal-cut  S/sqrt(S+B)      NSig      NBkg   EffSig   EffBkg
+--- --------------------------------------------------------------------------------------------------
+---        BDT:  (     1000,     1000)      -0.0346      25.2082  931.0218  433.0452    0.931    0.433
+--- --------------------------------------------------------------------------------------------------
+
+--- --------------------------------------------------------------------
+--- If you want to save the image as eps, gif or png, please comment out 
+--- the corresponding lines (line no. 239-241) in tmvaglob.C
+--- --------------------------------------------------------------------
+finished mass point 500
