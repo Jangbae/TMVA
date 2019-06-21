@@ -5,7 +5,7 @@
     - check input variables for training
 
 1. Training
-    - Training script : TMVAClassification.py__
+    - Training script : TMVAClassification.py  
         -- arguments : -m $method -l $vListKey -n $nTrees -d $mDepth
         -- method : BDT
         -- vListKey : key for variable list in varsList.py
