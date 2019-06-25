@@ -6,7 +6,6 @@ BDT = 'BDT'
 
 varListKey = 'BigComb'
 templateFile = '/user_data/jlee/TTTT/CMSSW_9_4_6_patch1/src/TMVA/TMVAClassificationApplication_template.C'
-# massList = ['Low1','Low2']
 weightFile = '/user_data/jlee/TTTT/CMSSW_9_4_6_patch1/src/TMVA/dataset/weights/'
 weightFile+= BDT+'_BigComb_3vars_mDepth2/TMVAClassification_'+BDT+'.weights.xml'
 
@@ -36,17 +35,14 @@ def makeTMVAClassAppConf(thefile):
 				for i, var in enumerate(varList): 
 					fout.write('   reader->AddVariable( \"'+var[0]+'\", &var'+str(i+1)+' );\n')
 			elif 'BookMVA' in line:
-# 				for mass in massList: 
 				fout.write('   reader->BookMVA( \"BDT method\", \"'+weightFile+'\" );\n')
 			elif 'Float_t BDT<mass>' in line:
-# 				for mass in massList: 
 				fout.write('   Float_t BDT;\n')
 				fout.write('   TBranch *b_BDT = newTree->Branch( \"BDT\", &BDT, \"BDT/F\" );\n')
 			elif 'SetBranchAddress' in line:
 				for i, var in enumerate(varList): 
 					fout.write('   theTree->SetBranchAddress( \"'+var[0]+'\", &var'+str(i+1)+' );\n')
 			elif 'BDT<mass> = reader->EvaluateMVA' in line:
-# 				for mass in massList: 
 				fout.write('      BDT = reader->EvaluateMVA( \"BDT method\" );\n')
 			else: fout.write(line)
 makeTMVAClassAppConf(condorDir+'/TMVAClassificationApplication.C')
@@ -57,7 +53,6 @@ os.system('mkdir -p '+outputDir)
 count=0
 for file in rootfiles:
     if '.root' not in file: continue
-    if 'QCD_HT300to500_TuneCP5' not in file: continue
     rawname = file[:-6]
     print file
     count+=1
