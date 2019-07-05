@@ -11,6 +11,11 @@
         -- vListKey : key for variable list in varsList.py  
         -- nTrees : number of trees to generation for boostrap  
         -- mDepth : depth of each tree  
+    - Splitting Training/Test/Application
+        -- check cut strings 'cutStrS' for signal, 'cutStrB' for bkg in TMVAClassification.py  
+        -- use branch 'isTraining' to splits events, '0', '1', '2'
+        -- keep events with one of the number for BDT application  
+        unused events must be used in template building, check cut string in analyze.py of single lepton analyzer  
     - Condor Submission script : doCondorClassification.py  
         -- nTrees : number of trees to generation for boostrap  
         -- BDTlist : training method  
@@ -23,6 +28,8 @@
             --- nTrees : number of trees to generation for boostrap  
             --- mDepth : depth of each tree  
 
+    
+    
 2. Application
     - Condor Submission script : doCondorApplication.py  
         -- arguments : nominal, JECup, JECdown, JERup, JERdown
