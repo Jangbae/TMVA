@@ -12,7 +12,7 @@
         -- nTrees : number of trees to generation for boostrap  
         -- mDepth : depth of each tree  
     - Splitting Training/Test/Application
-        -- check cut strings 'cutStrS' for signal, 'cutStrB' for bkg in TMVAClassification.py  
+        -- check cut strings 'cutStrS' for signal, 'cutStrB' for bkg, and 'cutStrC' for common in TMVAClassification.py  
         -- use branch 'isTraining' to splits events, '0', '1', '2'
         -- keep events with one of the number for BDT application  
         unused events must be used in template building, check cut string in analyze.py of single lepton analyzer  
